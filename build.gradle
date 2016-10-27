@@ -1,0 +1,34 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'maven'
+
+repositories {
+    jcenter()
+}
+
+group = 'com.github.wenhao'
+version = '1.0.0'
+
+dependencies {
+    compile "com.google.guava:guava:19.0"
+    compile "com.google:com.google.jsr305:1.0"
+
+    testCompile "junit:junit:4.12"
+
+    task sourcesJar(type: Jar) {
+        from sourceSets.main.allSource
+        classifier = 'sources'
+    }
+
+    task javadocJar(type: Jar, dependsOn: javadoc) {
+        classifier = 'javadoc'
+        from javadoc.destinationDir
+    }
+
+    artifacts {
+        archives jar
+        archives sourcesJar
+        archives javadocJar
+    }
+
+}

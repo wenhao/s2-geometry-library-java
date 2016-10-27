@@ -1,2 +1,6 @@
 
 build/
+.gradle/
+.idea/
+s2-geometry-library-java.ipr
+s2-geometry-library-java.iws
