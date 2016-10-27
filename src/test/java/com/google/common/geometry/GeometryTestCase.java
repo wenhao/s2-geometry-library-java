@@ -21,10 +21,12 @@ import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 
 import junit.framework.TestCase;
+import org.junit.Ignore;
 
 import java.util.List;
 import java.util.Random;
 
+@Ignore
 public strictfp class GeometryTestCase extends TestCase {
 
   public Random rand;
